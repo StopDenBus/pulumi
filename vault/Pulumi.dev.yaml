@@ -1,0 +1,11 @@
+config:
+  data:vault:
+    mounts:
+      test:
+        description: a test mount
+        type: kv-v2
+    secrets:
+      mysql_root:
+        mount: "test"
+        name: "mysql/admin"
+

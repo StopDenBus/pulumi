@@ -1,0 +1,26 @@
+---
+config:
+  data:proxmox:
+    containers:
+      vault_neu:
+        cpu:
+          cores: 2
+        description: Container running a vault instance
+        disk:
+          datastore: rpool
+          size: 10
+        memory:
+          ram: 1024
+          swap: 1024
+        network:
+          cidr: 192.168.0.3/24
+          gateway: 192.168.0.1
+          interface: eth0
+        node_name: stoppi
+        template:
+          id: local:vztmpl/ubuntu-22.04-standard_22.04-1_amd64.tar.zst
+          type: ubuntu
+    provider:
+      endpoint: https://stoppi.gusek.info:8006
+      token:
+        secure: AAABACH6db93dyZXYLcBrd+2g6OjoMm9Uyfl5DRl19kPDc+I43h7Xt4eLb/qAfeZP9yMM7BvbJPP0S+opW8wUM4gdmLbtBzBSIbPSXEALWEfV309Ihw=

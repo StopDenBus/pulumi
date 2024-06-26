@@ -1,0 +1,5 @@
+config:
+  data:ssh-keys:
+    use_cases:
+      deployment:
+        algorithm: 'ED25519'
